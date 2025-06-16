@@ -26,11 +26,11 @@ class StreamlitSLMApp:
         """Load the trained model (cached for performance)"""
         try:
             # Load preprocessor
-            with open('D:/SLM/preprocessor.pkl', 'rb') as f:
+            with open('preprocessor.pkl', 'rb') as f:
                 preprocessor = pickle.load(f)
             
             # Load model
-            checkpoint = torch.load('D:/SLM/final_slm_model.pt', map_location=_self.device)
+            checkpoint = torch.load('final_slm_model.pt', map_location=_self.device)
             config = checkpoint['config']
             
             model = SmallLanguageModel(
