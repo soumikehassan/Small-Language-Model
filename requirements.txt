@@ -2,3 +2,5 @@ streamlit
 torch
 pandas
 numpy
+tqdm
+matplotlib
